@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="css/main.css" type="text/css" rel="stylesheet" />
+        <style>
+
+            [class*='set']{
+                margin-top: 40px;
+                border: 1px solid black;
+                padding: 20px;
+            }
+
+            .set1 div{
+                border: 2px solid blue;
+            }
+
+            .set2 div{
+                border: 2px solid yellow;
+            }
+
+            .set3 div{
+                border: 2px solid green;
+            }
+
+            .set4 div{
+                border: 2px solid orange;
+            }
+
+            .set1 div,.set2 div, .set3 div, .set4 div{
+                height: 150px;
+            }
+
+            /*.columns h2{
+                position: absolute;
+                margin-left: 20px;
+            }*/
+        </style>
+    </head>
+    <body>
+        <h1 class="breakpoint_level"></h1>
+        <div class="set1 columns">
+            <h2>With Gutters</h2>
+            <h3>.grid-4</h3>
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+        </div>
+        <div class="set1 columns">
+            <h2>With Gutters</h2>
+            <h3>.grid-4.smallest-8</h3>
+            <div class="grid-4 smallest-8"></div>
+            <div class="grid-4 smallest-8"></div>
+            <div class="grid-4 smallest-8"></div>
+        </div>
+        <div class="set1 columns center">
+            <h2>With Gutters and centered</h2>
+            <h3>.grid-4.smallest-8</h3>
+            <div class="grid-4 smallest-8"></div>
+            <div class="grid-4 smallest-8"></div>
+            <div class="grid-4 smallest-8"></div>
+        </div>
+        <div class="set1 columns-no-gutter">
+            <h2>No gutters Gutters</h2>
+            <h3>.grid-4</h3>
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+        </div>
+        <div class="set1 columns-no-gutter">
+            <h2>No Gutters</h2>
+            <h3>.grid-4.smallest-3</h3>
+            <div class="grid-4 smallest-3"></div>
+            <div class="grid-4 smallest-3"></div>
+            <div class="grid-4 smallest-3"></div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

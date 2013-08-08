@@ -1,0 +1,105 @@
+$columns-count : 12;
+$gutter-width: 4%;
+$margin-bottom: 40px;
+
+//*--- Used to set trigger certain styles for *// 
+//*--- certain screen widths------------------*//
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1251px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 851px) { @content; }
+  }
+  @else if $point == youth-bear
+  {
+    @media (min-width: 651px) { @content; }
+  }
+  @else if $point == child-bear {
+    @media (min-width: 481px)  { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 480px)  { @content; }
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+@for $i from 1 through $columns-count{
+  .columns{
+
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    
+    .grid-#{$i} {
+
+      width: 100%;
+
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width);  
+      }
+      
+      float: left;
+      margin-right: $gutter-width;
+
+      &:nth-last-child(1){
+        margin-right: 0;
+      }
+    }
+
+    &.center{
+      text-align: center;
+
+      [class*=grid]{
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+    .smallest-#{$i}{
+      @include breakpoint(baby-bear){
+        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width) !important; 
+      }
+    }
+  }
+
+  .columns-no-gutter{
+
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    
+    .grid-#{$i} {
+      
+      width: 100%;
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count) * 100%;
+      }
+
+      float: left;
+    }
+
+    &.center{
+      text-align: center;
+
+      [class*=grid]{
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+    .smallest-#{$i}{
+      @include breakpoint(baby-bear){
+        width: ($i/$columns-count) * 100% !important;
+      } 
+    }
+
+  }
+}
