@@ -66,7 +66,7 @@ $margin-bottom: 40px;
       }
     }
 
-    .smallest-#{$i}{
+    .smaller-#{$i}{
       @include breakpoint(child-bear){
         width: ($i/$columns-count) * 100% !important;
       } 
@@ -112,7 +112,7 @@ $margin-bottom: 40px;
       }
     }
 
-    .smallest-#{$i}{
+    .smaller-#{$i}{
       @include breakpoint(child-bear){
         width: ($i/$columns-count) * 100% !important;
       } 

@@ -56,7 +56,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-1 {
+  .columns .smaller-1 {
     width: 8.33333% !important;
   }
 }
@@ -102,7 +102,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-1 {
+  .columns-no-gutter .smaller-1 {
     width: 8.33333% !important;
   }
 }
@@ -153,7 +153,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-2 {
+  .columns .smaller-2 {
     width: 16.66667% !important;
   }
 }
@@ -199,7 +199,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-2 {
+  .columns-no-gutter .smaller-2 {
     width: 16.66667% !important;
   }
 }
@@ -250,7 +250,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-3 {
+  .columns .smaller-3 {
     width: 25% !important;
   }
 }
@@ -296,7 +296,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-3 {
+  .columns-no-gutter .smaller-3 {
     width: 25% !important;
   }
 }
@@ -347,7 +347,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-4 {
+  .columns .smaller-4 {
     width: 33.33333% !important;
   }
 }
@@ -393,7 +393,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-4 {
+  .columns-no-gutter .smaller-4 {
     width: 33.33333% !important;
   }
 }
@@ -444,7 +444,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-5 {
+  .columns .smaller-5 {
     width: 41.66667% !important;
   }
 }
@@ -490,7 +490,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-5 {
+  .columns-no-gutter .smaller-5 {
     width: 41.66667% !important;
   }
 }
@@ -541,7 +541,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-6 {
+  .columns .smaller-6 {
     width: 50% !important;
   }
 }
@@ -587,7 +587,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-6 {
+  .columns-no-gutter .smaller-6 {
     width: 50% !important;
   }
 }
@@ -638,7 +638,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-7 {
+  .columns .smaller-7 {
     width: 58.33333% !important;
   }
 }
@@ -684,7 +684,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-7 {
+  .columns-no-gutter .smaller-7 {
     width: 58.33333% !important;
   }
 }
@@ -735,7 +735,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-8 {
+  .columns .smaller-8 {
     width: 66.66667% !important;
   }
 }
@@ -781,7 +781,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-8 {
+  .columns-no-gutter .smaller-8 {
     width: 66.66667% !important;
   }
 }
@@ -832,7 +832,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-9 {
+  .columns .smaller-9 {
     width: 75% !important;
   }
 }
@@ -878,7 +878,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-9 {
+  .columns-no-gutter .smaller-9 {
     width: 75% !important;
   }
 }
@@ -929,7 +929,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-10 {
+  .columns .smaller-10 {
     width: 83.33333% !important;
   }
 }
@@ -975,7 +975,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-10 {
+  .columns-no-gutter .smaller-10 {
     width: 83.33333% !important;
   }
 }
@@ -1026,7 +1026,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-11 {
+  .columns .smaller-11 {
     width: 91.66667% !important;
   }
 }
@@ -1072,7 +1072,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-11 {
+  .columns-no-gutter .smaller-11 {
     width: 91.66667% !important;
   }
 }
@@ -1123,7 +1123,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
-  .columns .smallest-12 {
+  .columns .smaller-12 {
     width: 100% !important;
   }
 }
@@ -1169,7 +1169,7 @@ pre, form, fieldset, table, th, td {
 }
 @media (max-width: 650px) {
   /* line 115, ../scss/_grid.scss */
-  .columns-no-gutter .smallest-12 {
+  .columns-no-gutter .smaller-12 {
     width: 100% !important;
   }
 }
