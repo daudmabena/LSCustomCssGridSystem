@@ -68,7 +68,7 @@ $margin-bottom: 40px;
 
     .smaller-#{$i}{
       @include breakpoint(child-bear){
-        width: ($i/$columns-count) * 100% !important;
+        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width) !important; 
       } 
     }
 

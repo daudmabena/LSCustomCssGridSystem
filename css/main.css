@@ -57,7 +57,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-1 {
-    width: 8.33333% !important;
+    width: 4.66667% !important;
   }
 }
 @media (max-width: 480px) {
@@ -154,7 +154,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-2 {
-    width: 16.66667% !important;
+    width: 13.33333% !important;
   }
 }
 @media (max-width: 480px) {
@@ -251,7 +251,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-3 {
-    width: 25% !important;
+    width: 22% !important;
   }
 }
 @media (max-width: 480px) {
@@ -348,7 +348,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-4 {
-    width: 33.33333% !important;
+    width: 30.66667% !important;
   }
 }
 @media (max-width: 480px) {
@@ -445,7 +445,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-5 {
-    width: 41.66667% !important;
+    width: 39.33333% !important;
   }
 }
 @media (max-width: 480px) {
@@ -542,7 +542,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-6 {
-    width: 50% !important;
+    width: 48% !important;
   }
 }
 @media (max-width: 480px) {
@@ -639,7 +639,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-7 {
-    width: 58.33333% !important;
+    width: 56.66667% !important;
   }
 }
 @media (max-width: 480px) {
@@ -736,7 +736,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-8 {
-    width: 66.66667% !important;
+    width: 65.33333% !important;
   }
 }
 @media (max-width: 480px) {
@@ -833,7 +833,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-9 {
-    width: 75% !important;
+    width: 74% !important;
   }
 }
 @media (max-width: 480px) {
@@ -930,7 +930,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-10 {
-    width: 83.33333% !important;
+    width: 82.66667% !important;
   }
 }
 @media (max-width: 480px) {
@@ -1027,7 +1027,7 @@ pre, form, fieldset, table, th, td {
 @media (max-width: 650px) {
   /* line 69, ../scss/_grid.scss */
   .columns .smaller-11 {
-    width: 91.66667% !important;
+    width: 91.33333% !important;
   }
 }
 @media (max-width: 480px) {
