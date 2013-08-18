@@ -6,17 +6,17 @@ $margin-bottom: 40px;
 //*--- certain screen widths------------------*//
 @mixin breakpoint($point) {
   @if $point == papa-bear {
-    @media (min-width: 1251px) { @content; }
+    @media (max-width: 1600px) { @content; }
   }
   @else if $point == mama-bear {
-    @media (min-width: 851px) { @content; }
+    @media (max-width: 1250px) { @content; }
   }
   @else if $point == youth-bear
   {
-    @media (min-width: 651px) { @content; }
+    @media (max-width: 850px) { @content; }
   }
   @else if $point == child-bear {
-    @media (min-width: 481px)  { @content; }
+    @media (max-width: 650px)  { @content; }
   }
   @else if $point == baby-bear {
     @media (max-width: 480px)  { @content; }
@@ -35,15 +35,29 @@ $margin-bottom: 40px;
       display: block;
       clear: both;
     }
+
+    &.center{
+      text-align: center;
+
+      [class*=grid]{
+        float: none;
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
     
     .grid-#{$i} {
 
-      width: 100%;
+      width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width);
+      
+      @include breakpoint(baby-bear){
+        width: 100%;
+      }
 
       @include breakpoint(child-bear){
-        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width);  
-      }
-      
+        width: 100%;
+      } 
+
       float: left;
       margin-right: $gutter-width;
 
@@ -52,13 +66,10 @@ $margin-bottom: 40px;
       }
     }
 
-    &.center{
-      text-align: center;
-
-      [class*=grid]{
-        float: none;
-        margin: 0 auto;
-      }
+    .smallest-#{$i}{
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count) * 100% !important;
+      } 
     }
 
     .smallest-#{$i}{
@@ -78,10 +89,15 @@ $margin-bottom: 40px;
     
     .grid-#{$i} {
       
-      width: 100%;
-      @include breakpoint(child-bear){
-        width: ($i/$columns-count) * 100%;
+      width: ($i/$columns-count) * 100%;
+
+      @include breakpoint(baby-bear){
+        width: 100%;
       }
+
+      @include breakpoint(child-bear){
+        width: 100%;
+      } 
 
       float: left;
     }
@@ -91,8 +107,15 @@ $margin-bottom: 40px;
 
       [class*=grid]{
         float: none;
+        display: inline-block;
         margin: 0 auto;
       }
+    }
+
+    .smallest-#{$i}{
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count) * 100% !important;
+      } 
     }
 
     .smallest-#{$i}{

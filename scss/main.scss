@@ -16,7 +16,7 @@
 	color: white;
 	top: 0;
 
-	content: "Baby Bear";
+	content: "Above Papa Bear";
 
 	@include breakpoint(papa-bear){
 		content: "Papa Bear";
@@ -32,5 +32,9 @@
 
 	@include breakpoint(child-bear){
 		content: "Child Bear";
+	}
+
+	@include breakpoint(baby-bear){
+		content: "Baby Bear";
 	}
 }
