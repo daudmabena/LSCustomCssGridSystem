@@ -16,25 +16,25 @@
 	color: white;
 	top: 0;
 
-	content: "Mobile, Below baby bear";
+	content: "Above Papa Bear";
 
-	@include breakpoint-for-lsgrid(baby-bear){
-		content: "Baby Bear";
+	@include breakpoint(papa-bear){
+		content: "Papa Bear";
 	}
 
-	@include breakpoint-for-lsgrid(child-bear){
-		content: "Child Bear";
-	}
-
-	@include breakpoint-for-lsgrid(youth-bear){
-		content: "Youth Bear";
-	}
-
-	@include breakpoint-for-lsgrid(mama-bear){
+	@include breakpoint(mama-bear){
 		content: "Mama Bear";
 	}
 
-	@include breakpoint-for-lsgrid(papa-bear){
-		content: "Papa Bear";
+	@include breakpoint(youth-bear){
+		content: "Youth Bear";
+	}
+
+	@include breakpoint(child-bear){
+		content: "Child Bear";
+	}
+
+	@include breakpoint(baby-bear){
+		content: "Baby Bear";
 	}
 }

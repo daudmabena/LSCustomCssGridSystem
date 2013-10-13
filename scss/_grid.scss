@@ -1,81 +1,39 @@
-$columns-count-lsgrid : 12;
-$gutter-width-lsgrid: 4%;
-$margin-bottom-lsgrid: 40px;
+$columns-count : 12;
+$gutter-width: 4%;
+$margin-bottom: 40px;
 
 //*--- Used to set trigger certain styles for *// 
 //*--- certain screen widths------------------*//
-@mixin breakpoint-for-lsgrid($point) {
+@mixin breakpoint($point) {
   @if $point == papa-bear {
-    @media (min-width: 1601px) { @content; }
+    @media (max-width: 1600px) { @content; }
   }
   @else if $point == mama-bear {
-    @media (min-width: 1251px) and (max-width: 1600px) { @content; }
+    @media (max-width: 1250px) { @content; }
   }
   @else if $point == youth-bear
   {
-    @media (min-width: 851px) and (max-width: 1250px) { @content; }
+    @media (max-width: 850px) { @content; }
   }
   @else if $point == child-bear {
-    @media (min-width: 651px) and (max-width: 850px)  { @content; }
+    @media (max-width: 650px)  { @content; }
   }
   @else if $point == baby-bear {
-    @media (min-width: 481px) and (max-width: 650px)  { @content; }
+    @media (max-width: 480px)  { @content; }
   }
 }
 
-.row{
-  clear: both !important;
-  float: none !important;
+*{
+  box-sizing: border-box;
 }
 
-/* Making sure parent container for grid elements 
-   takes up 100% of its parent */
-[class*="columns"]{
-  width: 100%;
-  position: relative;
-  display: block;
+@for $i from 1 through $columns-count{
+  .columns{
 
-  /* Making sure parent container does not collapse */
-  &:after{
+    &:after{
       content: "";
       display: block;
       clear: both;
-  }
-
-  /* Fixing calculation deficiencies that 
-     browsers have had for years */
-  *{
-    box-sizing: border-box;
-  }
-}
-
-/* Setting base width of all grid elements */
-[class*="grid-"]{
-  display: inline-block;
-
-  img{
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* Base style for mobile first grid */
-@for $i from 1 through $columns-count-lsgrid{
-  .columns{
-    
-    .grid-#{$i} {
-
-      width: 100%;
-      float: left;
-      margin-right: $gutter-width-lsgrid;
-      
-      @media (min-width: 481px){
-        width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid);
-      }
-
-      &:nth-last-child(1){
-        margin-right: 0;
-      }
     }
 
     &.center{
@@ -85,27 +43,63 @@ $margin-bottom-lsgrid: 40px;
         float: none;
         display: inline-block;
         margin: 0 auto;
+      }
+    }
+    
+    .grid-#{$i} {
+
+      width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width);
+      
+      @include breakpoint(baby-bear){
+        width: 100%;
+      }
+
+      @include breakpoint(child-bear){
+        width: 100%;
+      } 
+
+      float: left;
+      margin-right: $gutter-width;
+
+      &:nth-last-child(1){
+        margin-right: 0;
+      }
+    }
+
+    .smaller-#{$i}{
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width) !important; 
+      } 
+    }
+
+    .smallest-#{$i}{
+      @include breakpoint(baby-bear){
+        width: ($i/$columns-count * 100%) - ($gutter-width) + (($i)/$columns-count * $gutter-width) !important; 
       }
     }
   }
 
   .columns-no-gutter{
 
-    $gutter-width-lsgrid-zero: 0%;
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
     
     .grid-#{$i} {
-
-      width: 100%;
-      float: left;
-      margin-right: $gutter-width-lsgrid-zero;
       
-      @media (min-width: 481px){
-        width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero);
+      width: ($i/$columns-count) * 100%;
+
+      @include breakpoint(baby-bear){
+        width: 100%;
       }
 
-      &:nth-last-child(1){
-        margin-right: 0;
-      }
+      @include breakpoint(child-bear){
+        width: 100%;
+      } 
+
+      float: left;
     }
 
     &.center{
@@ -117,101 +111,18 @@ $margin-bottom-lsgrid: 40px;
         margin: 0 auto;
       }
     }
-  }
-}
 
-
-/* Style for Baby bear proportions - see top of file 
-   for media query definitions */
-@include breakpoint-for-lsgrid(baby-bear){
-  @for $i from 1 through $columns-count-lsgrid{
-    .columns{
-      .baby-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid)
-      }
+    .smaller-#{$i}{
+      @include breakpoint(child-bear){
+        width: ($i/$columns-count) * 100% !important;
+      } 
     }
 
-    .columns-no-gutter{
-      $gutter-width-lsgrid-zero: 0%;
-      .baby-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero)
-      }
-    }
-  }
-}
-
-/* Style for child bear proportions - see top of file 
-   for media query definitions */
-@include breakpoint-for-lsgrid(child-bear){
-  @for $i from 1 through $columns-count-lsgrid{
-    .columns{
-      .child-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid)
-      }
+    .smallest-#{$i}{
+      @include breakpoint(baby-bear){
+        width: ($i/$columns-count) * 100% !important;
+      } 
     }
 
-    .columns-no-gutter{
-      $gutter-width-lsgrid-zero: 0%;
-      .child-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero)
-      }
-    }
-  }
-}
-
-/* Style for youth bear proportions - see top of file 
-   for media query definitions */
-@include breakpoint-for-lsgrid(youth-bear){
-  @for $i from 1 through $columns-count-lsgrid{
-    .columns{
-      .youth-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid)
-      }
-    }
-
-    .columns-no-gutter{
-      $gutter-width-lsgrid-zero: 0%;
-      .youth-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero)
-      }
-    }
-  }
-}
-
-/* Style for mama bear proportions - see top of file 
-   for media query definitions */
-@include breakpoint-for-lsgrid(mama-bear){
-  @for $i from 1 through $columns-count-lsgrid{
-    .columns{
-      .mama-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid)
-      }
-    }
-
-    .columns-no-gutter{
-      $gutter-width-lsgrid-zero: 0%;
-      .mama-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero)
-      }
-    }
-  }
-}
-
-/* Style for papa bear proportions - see top of file 
-   for media query definitions */
-@include breakpoint-for-lsgrid(papa-bear){
-  @for $i from 1 through $columns-count-lsgrid{
-    .columns{
-      .papa-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid)
-      }
-    }
-
-    .columns-no-gutter{
-      $gutter-width-lsgrid-zero: 0%;
-      .papa-#{$i}{
-          width: ($i/$columns-count-lsgrid * 100%) - ($gutter-width-lsgrid-zero) + (($i)/$columns-count-lsgrid * $gutter-width-lsgrid-zero)
-      }
-    }
   }
 }
