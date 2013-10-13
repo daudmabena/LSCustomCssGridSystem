@@ -40,6 +40,7 @@
     </head>
     <body>
         <h1 class="breakpoint_level"></h1>
+        <h1>Gutter grids below</h1>
         <div class="set1 columns">
             <h2>With Gutters</h2>
             <h3>.grid-4</h3>
@@ -49,38 +50,78 @@
         </div>
         <div class="set1 columns">
             <h2>With Gutters</h2>
-            <h3>.grid-4.smallest-8</h3>
-            <div class="grid-4 smallest-8"></div>
-            <div class="grid-4 smallest-8"></div>
-            <div class="grid-4 smallest-8"></div>
+            <h3>.grid-4.baby-3</h3>
+            <div class="grid-4 baby-3"></div>
+            <div class="grid-4 baby-3"></div>
+            <div class="grid-4 baby-3"></div>
+        </div>
+        <div class="set1 columns">
+            <h2>With Gutters</h2>
+            <h3>.grid-4.child-10.youth-7</h3>
+            <div class="grid-4 child-10 youth-7"></div>
+            <div class="grid-4 child-10 youth-7"></div>
+            <div class="grid-4 child-10 youth-7"></div>
+        </div>
+        <div class="set1 columns">
+            <h2>With Gutters, grid in a grid</h2>
+            <h3>.grid-8 and .grid-4</h3>
+            <div class="grid-8">
+                <div class="columns">
+                    <div class="grid-4"></div>
+                    <div class="grid-4"></div>
+                    <div class="grid-4"></div>
+                </div>
+            </div>
+            <div class="grid-4"></div>
+        </div>
+        <div class="set1 columns">
+            <h2>With Gutters, grid in a grid, first and second grid are also a rows</h2>
+            <h3>.grid-8 and .grid-4</h3>
+            <div class="grid-8 row">
+                <div class="columns">
+                    <div class="grid-4"></div>
+                    <div class="grid-4"></div>
+                    <div class="grid-4"></div>
+                </div>
+            </div>
+            <div class="grid-4 row"></div>
         </div>
         <div class="set1 columns center">
             <h2>With Gutters and centered</h2>
-            <h3>.grid-4.smallest-8</h3>
-            <div class="grid-4 smallest-8"></div>
-            <div class="grid-4 smallest-8"></div>
-            <div class="grid-4 smallest-8"></div>
+            <h3>.grid-4.baby-8.child-3</h3>
+            <h4>Notice that you have to set your own gutters when you center grids as gutter details are not preserved</h4>
+            <div class="grid-4 baby-8 child-3"></div>
+            <div class="grid-4 baby-8 child-3"></div>
+            <div class="grid-4 baby-8 child-3"></div>
         </div>
+        <h1>Non Gutter grids below</h1>
         <div class="set1 columns-no-gutter">
-            <h2>No gutters Gutters</h2>
+            <h2>With no Gutters</h2>
             <h3>.grid-4</h3>
             <div class="grid-4"></div>
             <div class="grid-4"></div>
             <div class="grid-4"></div>
         </div>
         <div class="set1 columns-no-gutter">
-            <h2>No Gutters</h2>
-            <h3>.grid-4.smallest-3</h3>
-            <div class="grid-4 smallest-3"></div>
-            <div class="grid-4 smallest-3"></div>
-            <div class="grid-4 smallest-3"></div>
+            <h2>With no Gutters</h2>
+            <h3>.grid-4.baby-3</h3>
+            <div class="grid-4 baby-3"></div>
+            <div class="grid-4 baby-3"></div>
+            <div class="grid-4 baby-3"></div>
+        </div>
+        <div class="set1 columns-no-gutter">
+            <h2>With no Gutters</h2>
+            <h3>.grid-4.child-10.youth-7</h3>
+            <div class="grid-4 child-10 youth-7"></div>
+            <div class="grid-4 child-10 youth-7"></div>
+            <div class="grid-4 child-10 youth-7"></div>
         </div>
         <div class="set1 columns-no-gutter center">
-            <h2>No Gutters and centered</h2>
-            <h3>.grid-4.smallest-3</h3>
-            <div class="grid-4 smallest-3"></div>
-            <div class="grid-4 smallest-3"></div>
-            <div class="grid-4 smallest-3"></div>
+            <h2>With no Gutters and centered</h2>
+            <h3>.grid-4.baby-8.child-3</h3>
+            <div class="grid-4 baby-8 child-3"></div>
+            <div class="grid-4 baby-8 child-3"></div>
+            <div class="grid-4 baby-8 child-3"></div>
         </div>
         <script src="js/main.js"></script>
     </body>
